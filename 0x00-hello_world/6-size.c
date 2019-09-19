@@ -1,10 +1,8 @@
 #include <stdio.h>
-/**                                                                                                                           * main - Program that prints a string with printf                                                                            * @cha: this is a variable
- * @i: this is a variable
- * @li: this is a variable 
- * @lli: this is a variable 
- * @f: this is a variable    
- * Return: 0                                                                                                                  */
+/**
+ * main - Program that prints a string with printf
+ *Return 0
+ */
 int main(void)
 {
   char cha;
