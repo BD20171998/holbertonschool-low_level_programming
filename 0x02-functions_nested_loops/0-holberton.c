@@ -11,7 +11,7 @@ int main(void)
 
 	int i;
 
-	for (i = 0; i < 10; i++)
+	for (i = 0; i < 9; i++)
 		_putchar(mystring[i]);
 
 	_putchar('\n');
