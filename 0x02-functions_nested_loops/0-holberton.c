@@ -7,7 +7,7 @@
 
 int main(void)
 {
-	char mystring[9] = "Holberton";
+	char mystring[9] = {'H', 'o', 'l', 'b', 'e', 'r', 't', 'o', 'n'};
 
 	int i;
 
