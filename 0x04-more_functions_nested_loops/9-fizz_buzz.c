@@ -1,5 +1,11 @@
 #include <stdio.h>
 
+/**
+ * main - Program that prints 1-100 but replaces integers divisible by 3 or 5
+ * with specific text
+ * Return: 0
+ */
+
 int main(void)
 {
 
