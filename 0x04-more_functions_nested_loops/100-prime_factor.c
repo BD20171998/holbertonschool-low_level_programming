@@ -9,9 +9,9 @@
 
 int main(void)
 {
-	long num = 612852475143;
+	long factor, num = 612852475143;
 
-	int i, r, factor;
+	int i, r;
 
 	i = 2;
 
@@ -30,7 +30,7 @@ int main(void)
 		++i;
 	}
 
-	printf("%d\n", factor);
+	printf("%li\n", factor);
 
 	return (0);
 
