@@ -10,21 +10,22 @@ void print_number(int n)
 {
 	int base = 1, d, length = 0, j, r;
 
-	if (n < 0)
-	{
-		n = -n;
-		_putchar('-');
-	}
-
 	while (r != n)
 	{
 		base *= 10;
 		r = n % base;
 		++length;
 	}
-
 	base = base / 10;
-	_putchar('0' + (n / base));
+	if (n < 0)
+	{
+		n = -n;
+		_putchar('-');
+		_putchar('0' + (n / base));
+	}
+
+	else
+		_putchar('0' + (n / base));
 
 	if (length > 1)
 	{
@@ -34,7 +35,6 @@ void print_number(int n)
 			d = n / base;
 			_putchar('0' + d % 10);
 		}
-
 		_putchar('0' + (n % 10));
 	}
 }
