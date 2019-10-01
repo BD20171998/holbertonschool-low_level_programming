@@ -9,11 +9,13 @@
 
 void puts2(char *str)
 {
-	for (; *str != '\0'; str++)
-	{
-		_putchar(*str);
+	int i;
 
-		str += 1;
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		if(i % 2 == 0)
+			_putchar(str[i]);
+
 	}
 
 	_putchar('\n');
