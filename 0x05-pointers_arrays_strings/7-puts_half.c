@@ -20,6 +20,9 @@ void puts_half(char *str)
 			_putchar(str[i]);
 	}
 
+	else if (length_of_the_string == 1)
+		_putchar(str[0]);
+
 	else
 		for (i = (length_of_the_string - 1) / 2; i + 1 <=
 			     length_of_the_string; i++)
