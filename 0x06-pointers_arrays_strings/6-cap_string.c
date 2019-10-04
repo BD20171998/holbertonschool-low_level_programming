@@ -15,6 +15,9 @@ char *cap_string(char *c)
 
 	while (*(c + i) != '\0')
 	{
+		if (*(c + 0) >= 97 && *(c + 0) <= 122)
+			*(c + 0) -= 32;
+
 		for (j = 0; j < 14; ++j)
 		{
 			if (*(c + i) == sep[j] &&  (*(c + i + 1) >= 97 &&
