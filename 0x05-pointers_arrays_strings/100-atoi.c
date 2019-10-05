@@ -1,5 +1,5 @@
 #include "holberton.h"
-
+#include <limits.h>
 /**
  * _atoi - function that convert a string to an integer
  * @s: char pointer to covert to number
@@ -34,8 +34,11 @@ int _atoi(char *s)
 	n = 0;
 
 	for (c = start; c < (num + start); c++)
+	{
 		n = n * 10 + s[c] - '0';
-
+		if (n > INT_MAX)
+			return (-1);
+	}
 	if (neg % 2 != 0)
 		n = -n;
 
