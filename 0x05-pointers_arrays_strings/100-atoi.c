@@ -15,6 +15,12 @@ int _atoi(char *s)
 		if (*(s + i) == '-')
 			neg++;
 
+		if (*(s + i) == '\0')
+		{
+			n = 0;
+			return (n);
+		}
+
 		start++;
 		i++;
 	}
