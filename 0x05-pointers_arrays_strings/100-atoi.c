@@ -14,18 +14,15 @@ int _atoi(char *s)
 	{
 		if (*(s + i) == '-')
 			neg++;
-
 		if (*(s + i) == '\0')
 		{
 			n = 0;
 			return (n);
 		}
-
 		start++;
-
-		if (i + 1 < i)
-			return (-1);
 		i++;
+		if (i + 1 < i)
+			return (0);
 	}
 
 	while (*(s + i) >= 48 && *(s + i) <= 57)
@@ -35,12 +32,9 @@ int _atoi(char *s)
 	}
 
 	n = 0;
-
 	for (c = start; c < (num + start); c++)
 		n = n * 10 + s[c] - '0';
-
 	if (neg % 2 != 0)
 		n = -n;
-
 	return (n);
 }
