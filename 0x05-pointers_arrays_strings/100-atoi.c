@@ -22,6 +22,9 @@ int _atoi(char *s)
 		}
 
 		start++;
+
+		if (i + 1 < i)
+			return (-1);
 		i++;
 	}
 
@@ -34,11 +37,8 @@ int _atoi(char *s)
 	n = 0;
 
 	for (c = start; c < (num + start); c++)
-	{
 		n = n * 10 + s[c] - '0';
-		if (n > INT_MAX)
-			return (-1);
-	}
+
 	if (neg % 2 != 0)
 		n = -n;
 
