@@ -20,7 +20,7 @@ int check_sq(int n, int d)
 	if  (e == d && r == 0)
 		return (d);
 
-	if  (e == n)
+	if  (e == n || d == 0)
 		return (-1);
 
 	return (check_sq(n, d));
