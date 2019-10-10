@@ -4,7 +4,7 @@
  * check_sq - helper function that determines whether a number is a
  * natural square root
  * @n: int to check if there is a natural square root
- * @d: int divisor
+ * @f: int divisor
  * Return: int d if divisior is natual square number or -1 if not
  */
 
