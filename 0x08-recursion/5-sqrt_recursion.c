@@ -8,22 +8,19 @@
  * Return: int d if divisior is natual square number or -1 if not
  */
 
-int check_sq(int n, int d)
+int check_sq(int n, int f)
 {
-	int e, r;
+	int t;
 
-	--d;
+	t = f * f;
 
-	e = n / d;
-	r = n % d;
-
-	if  (e == d && r == 0)
-		return (d);
-
-	if  (e == n || d == 0)
+	if (t > n)
 		return (-1);
 
-	return (check_sq(n, d));
+	if (t == n)
+		return (f);
+
+	return (check_sq(n, ++f));
 }
 
 /**
@@ -41,5 +38,5 @@ int _sqrt_recursion(int n)
 	if (n == 0 || n == 1)
 		return (n);
 
-	return (check_sq(n, n));
+	return (check_sq(n, 1));
 }
