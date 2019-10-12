@@ -8,7 +8,8 @@
 
 int _atoi(char *s)
 {
-	int c, i = 0, n, neg = 0, num = 0, start = 0;
+	int c, i = 0, j, neg = 0, num = 0, start = 0;
+	unsigned int n;
 
 	while (*(s + i) < 48 || *(s + i) > 57)
 	{
@@ -16,8 +17,9 @@ int _atoi(char *s)
 			neg++;
 		if (*(s + i) == '\0')
 		{
-			n = 0;
-			return (n);
+			j = 0;
+			n = j;
+			return (j);
 		}
 		start++;
 		i++;
@@ -34,7 +36,9 @@ int _atoi(char *s)
 	n = 0;
 	for (c = start; c < (num + start); c++)
 		n = n * 10 + s[c] - '0';
+
 	if (neg % 2 != 0)
 		n = -n;
-	return (n);
+	j = n;
+	return (j);
 }
