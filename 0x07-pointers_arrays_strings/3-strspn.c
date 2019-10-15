@@ -1,9 +1,9 @@
 #include "holberton.h"
-
+#include <stdio.h>
 /**
  * _strspn - function that gets the length of a prefix substring
- * @s: char pointer for initial string
- * @accept: char pointer for substring to be checked
+ * @s: char pointer for initial string to be checked
+ * @accept: char pointer for substring
  * Return: number of bytes in segment "s" which consist only of bytes
  * from accept
  */
@@ -11,28 +11,28 @@
 unsigned int _strspn(char *s, char *accept)
 {
 
-	int b = 0, e = 0, i = 0, j;
+	unsigned int i, j;
+
+	int count = 0;
 
 
-	for (i = 0; *(accept + i) !=  '\0'; ++i)
+	for (i = 0; *(s + i) != '\0'; i++)
 	{
-		j = 0;
 
-		while (*s != '\0')
+		for (j = 0; *(accept + j) != '\0'; j++)
 		{
 
-			if (*(s + j) == *(accept + i) && e < j)
-				e = j + 1;
+			if (*(s + i) == *(accept + j))
+			{
+				++count;
+				break;
+			}
 
-			if (*(s + j) == *(accept + i) && j < b)
-				b = j;
-
-			++s;
-			++j;
 		}
 
-		++i;
+		if (*(accept + j) == '\0')
+			break;
 	}
 
-	return (e - b);
+	return (count);
 }
