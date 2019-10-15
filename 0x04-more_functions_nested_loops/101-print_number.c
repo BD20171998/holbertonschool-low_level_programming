@@ -1,11 +1,9 @@
 #include "holberton.h"
-
 /**
  * print_number - function that prints an integer
  * @n: integer to be displayed
  * Return: void
  */
-
 void print_number(int n)
 {
 	int base = 1, d, length = 0, j, r;
@@ -16,7 +14,9 @@ void print_number(int n)
 		r = n % base;
 		++length;
 	}
+
 	base = base / 10;
+
 	if (n < 0)
 	{
 		n = -n;
@@ -24,7 +24,7 @@ void print_number(int n)
 		_putchar('0' + (n / base));
 	}
 
-	else
+	else if (n >= 0)
 		_putchar('0' + (n / base));
 
 	if (length > 1)
