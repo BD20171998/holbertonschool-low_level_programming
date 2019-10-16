@@ -16,10 +16,16 @@ char *str_concat(char *s1, char *s2)
 	a = malloc(2 * sizeof(char *));
 
 	if (a == NULL)
+	{
+		free(a);
 		return (NULL);
+	}
 
 	if (s1 == NULL || s2 == NULL || (*s1 == '\0' && *s2 == '\0'))
+	{
+		free(a);
 		return ('\0');
+	}
 
 	for (i = 0; s1[i] != '\0'; i++)
 		a[i] = s1[i];
