@@ -15,9 +15,12 @@ char *_strdup(char *str)
 
 	int i, l = 0;
 
+	if (str == NULL)
+		return (NULL);
+
 	dup = malloc(sizeof(char *));
 
-	if (str == NULL)
+	if (dup == NULL)
 		return (NULL);
 
 	for (i = 0; str[i] != '\0'; i++)
