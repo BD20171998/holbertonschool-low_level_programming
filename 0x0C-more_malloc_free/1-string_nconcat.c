@@ -16,7 +16,7 @@ int _strlen_recursion(char *s)
 }
 
 /**
- * str_concat - function that concatenates two strings with malloc'd memory
+ * string_nconcat - function that concatenates two strings with malloc'd memory
  * @s1: Char pointer for string 1
  * @s2: Char pointer for string 2
  * @n: Unsigned int for memory size to be allocated
