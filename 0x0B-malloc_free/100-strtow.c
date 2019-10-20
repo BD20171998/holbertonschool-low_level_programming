@@ -1,6 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
-#include <stdio.h>
+
 /**
  * wordcount - function that counts words delimited by space
  * @str: Char pointer for text blob to check
