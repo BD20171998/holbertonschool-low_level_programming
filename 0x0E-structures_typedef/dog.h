@@ -1,5 +1,5 @@
-#ifndef _dog_
-#define _dog_
+#ifndef _DOG_
+#define _DOG_
 
 
 
