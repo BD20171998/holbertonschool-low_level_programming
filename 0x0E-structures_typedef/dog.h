@@ -1,6 +1,8 @@
 #ifndef _dog_
 #define _dog_
 
+
+
 /**
  * struct dog - Dog elements
  * @name: Char pointer
@@ -15,5 +17,6 @@ struct dog
 	char *owner;
 };
 
+void init_dog(struct dog *d, char *name, float age, char *owner);
 
 #endif
