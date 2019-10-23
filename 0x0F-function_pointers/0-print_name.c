@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "function_pointers.h"
 
 
@@ -10,12 +11,9 @@
 
 void print_name(char *name, void (*f)(char *))
 {
-	void (*p)(char *);
 
-	if (f == NULL)
-		return (NULL);
+	if (f == NULL || name == NULL)
+		return;
 
-	p = f;
-
-	p(name);
+	f(name);
 }
