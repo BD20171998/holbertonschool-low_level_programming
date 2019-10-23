@@ -12,10 +12,10 @@ void print_name(char *name, void (*f)(char *))
 {
 	void (*p)(char *);
 
-	p = f;
-
 	if (f == NULL)
 		return (NULL);
+
+	p = f;
 
 	p(name);
 }
