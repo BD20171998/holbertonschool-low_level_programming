@@ -70,7 +70,6 @@ void free_grid(char **grid, int height)
 char **strtow(char *str)
 {
 	int i, j = 0, k, wc, wl;
-
 	char **s = NULL;
 
 	wc = wordcount(str);
@@ -80,12 +79,11 @@ char **strtow(char *str)
 	if (s == NULL)
 		return (NULL);
 
-	for (i = 0; str[i]; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
 		if (str[i] != ' ')
 		{
 			wl = (word_len(str + i));
-
 			s[j] = malloc((wl + 1) * sizeof(char));
 
 			if (s[j] == NULL)
@@ -94,16 +92,18 @@ char **strtow(char *str)
 				return (NULL);
 			}
 
-			for (k = 0; str[i] != '\0'  && str[i] != ' '; i++, k++)
+			for (k = 0; k < wl; i++, k++)
 				s[j][k] = str[i];
 
 			s[j][k] = '\0';
+
+			if (j == wc)
+				break;
 
 			j++;
 		}
 	}
 
 	s[j] = '\0';
-
 	return (s);
 }
