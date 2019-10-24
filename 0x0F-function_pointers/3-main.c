@@ -14,7 +14,8 @@ int main(int argc, char **argv)
 {
 	int num1 = atoi(argv[1]), num2 = atoi(argv[3]), result;
 
-	if (argc != 4)
+	if (argc != 4 || argc[0] == NULL || argc[1] == NULL || argc[2] == NULL
+	    || argc[3] == NULL)
 	{
 		printf("Error\n");
 		exit(98);
