@@ -6,35 +6,35 @@
  */
 void print_number(int n)
 {
-	int base = 1, d, length = 0, j, r;
-
-	while (r != n)
-	{
-		base *= 10;
-		r = n % base;
-		++length;
-	}
-
-	base = base / 10;
+	int length = 0, j;
+	unsigned int base = 1, d, max;
 
 	if (n < 0)
 	{
 		n = -n;
 		_putchar('-');
-		_putchar('0' + (n / base));
 	}
 
-	else if (n >= 0)
-		_putchar('0' + (n / base));
+	max = n;
+	d = max;
+
+	do {
+		d /= 10;
+		++length;
+	} while (d != 0);
+
+	for (j = 0; j < length -  1; j++)
+		base = base * 10;
+	_putchar('0' + (max / base));
 
 	if (length > 1)
 	{
 		for (j = 0; j < length - 2; j++)
 		{
 			base /= 10;
-			d = n / base;
+			d = max / base;
 			_putchar('0' + d % 10);
 		}
-		_putchar('0' + (n % 10));
+		_putchar('0' + (max % 10));
 	}
 }
