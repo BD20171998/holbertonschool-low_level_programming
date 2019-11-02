@@ -14,6 +14,9 @@ void print_all(const char * const format, ...)
 	char *temp;
 	int i = 0;
 
+	if (format == NULL)
+		return;
+
 	va_start(buffer, format);
 	while (format[i])
 	{
