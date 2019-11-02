@@ -15,7 +15,10 @@ void print_all(const char * const format, ...)
 	int i = 0;
 
 	while (format == NULL)
+	{
+		printf("\n");
 		return;
+	}
 	va_start(buffer, format);
 
 	while (format[i])
@@ -24,16 +27,12 @@ void print_all(const char * const format, ...)
 		{
 		case 'c':
 			printf("%c", (char)va_arg(buffer, int));
-			break;
 		case 'i':
 			printf("%i", va_arg(buffer, int));
-			break;
 		case 'f':
 			printf("%f", (float)va_arg(buffer, double));
-			break;
 		case 's':
 			temp =  va_arg(buffer, char *);
-
 			if (temp == NULL)
 			{
 				printf("(nil)");
