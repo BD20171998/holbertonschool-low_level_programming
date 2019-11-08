@@ -1,6 +1,4 @@
-#include <stdlib.h>
 #include "holberton.h"
-
 
 /**
  * print_binary - function that prints the binary representation of a number
