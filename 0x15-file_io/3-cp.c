@@ -12,10 +12,9 @@
 
 void err_msg(char *msg, char *file, int status)
 {
-	dprintf(STDERR_FILENO, "%s,%s\n", msg, file);
+	dprintf(STDERR_FILENO, "%s%s\n", msg, file);
 	exit(status);
 }
-
 
 /**
  * main - program that copies the content of a file to another file
@@ -31,13 +30,15 @@ int main(int argc, char *argv[])
 	ssize_t n_read, n_write;
 
 	if (argc != 3)
-		err_msg("Usage: cp file_from file_to\n", "", 97);
+		err_msg("Usage: cp file_from file_to", "", 97);
 
 	fd = open(argv[1], O_RDONLY);
+
 	if (fd < 0)
 		err_msg("Error: Can't read from file ", argv[1], 98);
 
 	fd2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+
 	if (fd2 < 0)
 		err_msg("Error: Can't write to ", argv[2], 99);
 
