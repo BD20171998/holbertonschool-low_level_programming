@@ -45,6 +45,7 @@ dlistint_t *last_node(dlistint_t *h, dlistint_t *nw, int n)
 	nw->prev = temp->prev;
 	nw->next = temp;
 	temp->prev = nw;
+	temp->next = NULL;
 
 	return (nw);
 }
