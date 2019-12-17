@@ -71,7 +71,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		return (1);
 	}
 
-	else if (index > 0 && index < (unsigned int) j)
+	else if (index > 0 && index <= (unsigned int) j)
 	{
 		j = del_middle(*head, index);
 		return (j);
