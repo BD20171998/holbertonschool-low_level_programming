@@ -51,6 +51,9 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	if (*head == NULL || head == NULL)
 		return (-1);
 
+	for (j = 0, temp = *head; temp != NULL; temp = temp->next, ++j)
+		;
+
 	if (index == 0 && (*head)->next == NULL)
 	{
 		temp = *head;
@@ -68,7 +71,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		return (1);
 	}
 
-	else if (index > 0)
+	else if (index > 0 && index < (unsigned int) j)
 	{
 		j = del_middle(*head, index);
 		return (j);
