@@ -23,34 +23,6 @@ unsigned int length(dlistint_t *h)
 }
 
 /**
- * last_node - Function that adds a new node at position length - 1
- * of a linked dlistint_t
- * list
- * @h: Pointer for linked dlistint_t list for head
- * @nw: Pointer for newly malloc'd node
- * @n: Int to be added for new node
- * Return: Pointer to newly created node
- */
-
-dlistint_t *last_node(dlistint_t *h, dlistint_t *nw, int n)
-{
-	dlistint_t *temp;
-
-	temp  = h;
-
-	while (temp->next != NULL)
-		temp = temp->next;
-
-	nw->n = n;
-	nw->prev = temp->prev;
-	nw->next = temp;
-	temp->prev = nw;
-	temp->next = NULL;
-
-	return (nw);
-}
-
-/**
  * middle_node - Function that adds a new node between 2 nodes of a linked
  * dlistint_t list
  * @h: Pointer for linked dlistint_t list for head
@@ -117,15 +89,9 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (new);
 	}
 
-	else if (idx > 0 && idx < len - 1)
+	else if (idx > 0 && idx < len)
 	{
 		new = middle_node(*h, new, n, idx);
-		return (new);
-	}
-
-	else if (idx == len - 1)
-	{
-		new = last_node(*h, new, n);
 		return (new);
 	}
 
