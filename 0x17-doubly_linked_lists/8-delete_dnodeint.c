@@ -22,7 +22,7 @@ int del_middle(dlistint_t *h, unsigned int ind)
 			return (1);
 		}
 
-		if ((ind - 1) == i)
+		if ((ind - 1) == i && prev->next != NULL)
 		{
 			temp = prev->next;
 			next = temp->next;
@@ -57,8 +57,8 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	if (index == 0 && (*head)->next == NULL)
 	{
 		temp = *head;
-		*head = NULL;
 		free(temp);
+		*head = NULL;
 		return (1);
 	}
 
