@@ -3,5 +3,7 @@ CC	:= gcc
 
 SRC	:= holberton.c main.c
 
+.SECONDARY: $(SRC)
+
 all:
 	$(CC) $(SRC) -o holberton
