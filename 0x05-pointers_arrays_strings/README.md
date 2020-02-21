@@ -48,9 +48,7 @@ What you should learn from this project:
 
 
 ### [9. strcpy](./9-strcpy.c)
-* 
-Prototype: char *_strcpy(char *dest, char *src); 
-
+* Prototype: char *_strcpy(char *dest, char *src); 
 
 
 ### [10. Great leaders are willing to sacrifice the numbers to save the people. Poor leaders sacrifice the people to save the numbers](./100-atoi.c)
