@@ -9,7 +9,8 @@ NAME	= holberton
 RM	= rm
 
 clean:	$(RM) .*.*swp
-        $(RM) *~
+	$(RM) *~
+	$(RM) $(NAME)
 
 oclean:	$(RM) $(OBJ)
 
