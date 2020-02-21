@@ -1,9 +1,7 @@
 
-CC	:= gcc
+CC	= gcc
 
-SRC	:= holberton.c main.c
-
-.SECONDARY: $(SRC)
+SRC	= holberton.c main.c
 
 all:
 	$(CC) $(SRC) -o holberton
