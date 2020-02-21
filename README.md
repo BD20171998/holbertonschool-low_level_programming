@@ -35,6 +35,7 @@ This repository contains programs written in C for the Low Level Programming cur
 | [0x18. C - Dynamic libraries](./0x18-dynamic_libraries) | Applications of dynamic libraries |
 | [0x19. C - Stacks, Queues - LIFO, FIFO](https://github.com/BD20171998/monty) | Custom interpreter for Monty ByteCodes files using stacks/queues |
 | [0x1A. C - Hash tables](./0x1A-hash_tables) | Implementation of hash tables with djb2 algorithm |
+| [0x1C. C - Makefiles](./0x1C-makefiles) | Makefile Requirements in C |
 
 ## Author
 
