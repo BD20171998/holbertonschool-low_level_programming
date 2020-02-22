@@ -10,6 +10,9 @@ RM	= rm -f
 
 .PHONY : clean fclean oclean
 
+all:	$(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
 clean:
 	$(RM) .*.*swp *~ $(NAME)
 
@@ -18,8 +21,5 @@ fclean:	clean
 
 oclean:	$(RM) $(OBJ)
 
-re:	fclean
+re:	oclean
 	all
-
-all:	$(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
