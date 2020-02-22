@@ -13,11 +13,9 @@ RM	= rm -f
 all:	$(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
-clean:
-	$(RM) .*.*swp *~ $(NAME)
+clean:	$(RM) .*.*swp *~ $(NAME)
 
-fclean:	clean
-	$(RM) $(OBJ)
+fclean:	clean $(RM) $(OBJ)
 
 oclean:	$(RM) $(OBJ)
 
