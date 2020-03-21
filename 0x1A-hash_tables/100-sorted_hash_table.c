@@ -101,10 +101,10 @@ int assign_head(shash_node_t *new, shash_table_t *ht)
  * when needed
  * @new: newly created node of type shash_node_t that is to be checked
  * @ht: hash table of type shash_table_t
- * Return: 1 if node was updated or created successfully, 0 otherwise
+ * Return: Void
  */
 
-int assign(shash_node_t *new, shash_table_t *ht)
+void assign(shash_node_t *new, shash_table_t *ht)
 {
 	shash_node_t *temp;
 	int status;
@@ -112,7 +112,7 @@ int assign(shash_node_t *new, shash_table_t *ht)
 	status = assign_head(new, ht);
 
 	if (status == 1)
-		return (1);
+		return;
 
 	temp = ht->shead->snext;
 
@@ -124,7 +124,7 @@ int assign(shash_node_t *new, shash_table_t *ht)
 			new->snext = temp;
 			temp->sprev->snext = new;
 			temp->sprev = new;
-			return (1);
+			return;
 		}
 
 		if (strcmp(new->key, temp->key) > 0 && temp->snext == NULL)
@@ -133,11 +133,10 @@ int assign(shash_node_t *new, shash_table_t *ht)
 			new->snext = temp->snext;
 			temp->snext = new;
 			ht->stail = new;
-			return (1);
+			return;
 		}
 		temp = temp->snext;
 	}
-	return (0);
 }
 
 /**
@@ -152,7 +151,6 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 {
 	shash_node_t *head, *new, *temp;
 	unsigned long int index;
-	int status;
 
 	if (ht == NULL || key == NULL)
 		return (0);
@@ -166,9 +164,9 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 
 	if (ht->array[index] == NULL)
 	{
-		status = assign(new, ht);
+		assign(new, ht);
 		ht->array[index] = new;
-		return (status);
+		return (1);
 	}
 	head = ht->array[index];
 	temp = head;
@@ -185,6 +183,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 		}
 		temp = temp->next;
 	}
+	assign(new, ht);
 	new->next = head;
 	ht->array[index] = new;
 	return (1);
