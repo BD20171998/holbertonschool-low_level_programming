@@ -48,19 +48,16 @@ int advanced_binary_help(int *array, int low, int high, int value)
 
 	printer(array, low, high);
 
-	mid =  low + (high - low) / 2;
+	mid =  low + (high - low) / 2 + 1;
 
-	if (value == array[mid - 1])
-		return (mid - 1);
-
-	else if (value == array[mid])
-		return (mid);
-
-	else if (value < array[mid])
+	if (value < array[mid])
 		return (advanced_binary_help(array, low, mid - 1, value));
 
-	else
+	else if (value > array[mid])
 		return (advanced_binary_help(array, mid + 1, high, value));
+
+	else
+		return (mid);
 }
 
 /**
