@@ -43,8 +43,6 @@ int advanced_binary_help(int *array, int low, int high, int value)
 {
 	int mid;
 
-	printer(array, low, high);
-
 	mid =  low + (high - low) / 2;
 
 	if (low > high && array[mid] == value)
@@ -52,6 +50,8 @@ int advanced_binary_help(int *array, int low, int high, int value)
 
 	if  (low > high && array[low] != value)
 		return (-1);
+
+	printer(array, low, high);
 
 	if (value == array[mid] && value != array[mid - 1])
 		return (mid);
