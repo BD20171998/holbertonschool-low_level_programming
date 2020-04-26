@@ -41,14 +41,11 @@ void printer(int *array, int l, int r)
 
 int advanced_binary_help(int *array, int low, int high, int value)
 {
-	int mid;
+	int mid = 0;
 
 	mid =  low + (high - low) / 2;
 
-	if (low > high && array[mid] == value)
-		return (mid);
-
-	if  (low > high && array[low] != value)
+	if  (low > high)
 		return (-1);
 
 	printer(array, low, high);
@@ -69,7 +66,7 @@ int advanced_binary_help(int *array, int low, int high, int value)
  * handles duplicates
  * @array: int  pointer to the first element of the array to search in
  * @size: size_t variable of  the number of elements in array
- * @value: is the value to search for
+ * @value: the value to search for
  * Return: first index where value is located, -1 if array is NULL or
  * value is not found
  */
