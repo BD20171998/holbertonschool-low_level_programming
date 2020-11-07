@@ -35,8 +35,10 @@ This repository contains programs written in C for the Low Level Programming cur
 | [0x18. C - Dynamic libraries](./0x18-dynamic_libraries) | Applications of dynamic libraries |
 | [0x19. C - Stacks, Queues - LIFO, FIFO](https://github.com/BD20171998/monty) | Custom interpreter for Monty ByteCodes files using stacks/queues |
 | [0x1A. C - Hash tables](./0x1A-hash_tables) | Implementation of hash tables with djb2 algorithm |
+| [0x1B. C - Sorting algorithms & Big O](https://github.com/BD20171998/sorting_algorithms) | Big O Notation and sorting algorithms |
 | [0x1C. C - Makefiles](./0x1C-makefiles) | Makefile Requirements in C |
-
+| [0x1D. C - Binary trees](https://github.com/BD20171998/binary_trees) | Binary Trees, AVL Trees, Max Heaps |
+| [0x1E. C - Search Algorithms](./0x1E-search_algorithms) | Linear, binary, jump, exponential and interpolation searches |
 ## Author
 
 - **Bob Deprizio** - [BD20171998](https:///github.com/BD20171998)
