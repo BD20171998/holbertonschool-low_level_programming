@@ -156,7 +156,7 @@ julien@ubuntu:~/0x18. Dynamic libraries$ nm -D --defined-only liball.so
 0000000000001176 T _strstr
 ```
 
-### [2. Either write something worth reading or do something worth writing](https://medium.com/@tuvo1106/using-static-libraries-in-c-20cc5753168e)
+### [2. Either write something worth reading or do something worth writing](https://medium.com/@robert.deprizio/static-vs-dynamic-libraries-abd6fd727d7e)
 
 - Write a blog post describing the differences between static and dynamic libraries. It should cover:
   - Why using libraries in general
