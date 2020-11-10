@@ -1,8 +1,7 @@
 # 0x1C. C - Makefiles
 
 
-## Author
-* **rning Objectives
+## Learning Objectives
 
 General
 
@@ -246,4 +245,5 @@ guillaume@ubuntu:~/0x1C$ ./5-main.py
 12
 ```
 
+## Author
 **Robert Deprizio** - [BD20171998](https://github.com/BD20171998)
