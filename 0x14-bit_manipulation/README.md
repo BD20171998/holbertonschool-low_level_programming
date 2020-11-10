@@ -1,8 +1,7 @@
 # 0x14. C - Bit manipulation
 
 
-## Author
-* **rning Objectives
+## Learning Objectives
 
 General
 
@@ -340,4 +339,4 @@ NUMA node(s):          1
 Vendor ID:             GenuineIntel
 ```
 
-Robert Deprizio** - [BD20171998](https://github.com/BD20171998)
+**Robert Deprizio** - [BD20171998](https://github.com/BD20171998)
